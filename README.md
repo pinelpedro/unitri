@@ -1,3 +1,4 @@
+
 class Fatura():
     def __init__(self, nI = 0 , descricao = 0 , quantidade = 0, preço =0.):
 
@@ -7,26 +8,18 @@ class Fatura():
         self.Preço = preço
 
 
-meu = Fatura()
-meu.Quantidade
 
-class respostas():
-    def __init__(self,r1,r2,r3,r4):
-        self.r1 = input(int("qual o numero do item?"))
-        self.r2 = input(str("qual a sua descrição?"))
-        self.r3 = input(int("quantos eram?"))
-        self.r4 = input(int("qual seu preço tolal"))
-    #atribuição
-        self.Numeroitem = self.r1
-        self.Descricao = self.r2
-        self.Quantidade = self.r3
-        self.Preço = self.r4
+resp = Fatura()
+print(" - " * 20)
+resp.Numeroitem = int(input("digite o numero do produto:"))
+resp.Descricao = str(input("Adicione uma descrição:"))
+resp.Quantidade = int(input("Quantos são:"))
+resp.Preço = int(input("Qual seu preço:"))
+print(" - " * 20)
+print(" O numero do item é :{} \n a descrição é      :{}\n e tem :{}\n no preço de :{}\n e o seu total é {}".format(resp.Numeroitem, resp.Descricao, resp.Quantidade, resp.Preço,resp.Quantidade * resp.Preço))
 
-class imprime():
-    pass
-
-class get_valor_fatura():
+class get_valor_fatura(Fatura):
     def __init__(self, total):
         self.total = total
-        total = self.Quantidade * self.Preço
-        print(total)
+        self.total = resp.Preço * resp.Quantidade
+        print("o total é {}".format(self.total))
