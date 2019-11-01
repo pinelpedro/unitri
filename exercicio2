@@ -1,13 +1,21 @@
 class Empregado:
-    def __init__(self,nome = None,sobrenome = None,salario = 0.0):
-        self.Nome = nome
+    def __init__(self,nome, sobrenome , Salario = 0.0):
+        self._Nome = nome
+        self._Sobrenome = sobrenome
+        self._Salario = Salario
+       
+       @property
+       def Nome (self):
+        return self._Nome
         
-        self.Sobrenome = sobrenome
-        self.Salario = salario
-        return
+       @Nome.setter
+       def Nome (self, Nome):
+         self._Nome = Nome
 
 
 Empregado = Empregado()
 Empregado.Nome = str(input(" qual seu nome? "))
 Empregado.Sobrenome = str(input(" qual seu sobrenome ?"))
 Empregado.Salario = int(input("qual é seu salaario mensal? "))
+
+Empregado1 = Empregado (Luis, Almeida, 100)
