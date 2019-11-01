@@ -1,0 +1,13 @@
+class Empregado:
+    def __init__(self,nome = None,sobrenome = None,salario = 0.0):
+        self.Nome = nome
+        
+        self.Sobrenome = sobrenome
+        self.Salario = salario
+        return
+
+
+Empregado = Empregado()
+Empregado.Nome = str(input(" qual seu nome? "))
+Empregado.Sobrenome = str(input(" qual seu sobrenome ?"))
+Empregado.Salario = int(input("qual é seu salaario mensal? "))
