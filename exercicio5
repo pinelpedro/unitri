@@ -1,0 +1,18 @@
+import datetime
+
+class datas:
+    def __init__(self,dia = 0,mes = None,ano = 0, avancar = 0):
+        self.dia = datetime.datetime.today().day
+        self.mes = datetime.datetime.today().month
+        self.ano = datetime.datetime.today().year
+    def __str__(self):
+        self.dia
+        self.mes
+        self.ano
+
+hoje = datas()
+print("{}/{}/{}".format(hoje.dia,hoje.mes,hoje.ano))
+
+if str(input("deseja avaçar um dia? ")) == ("sim"):
+    hoje.dia = hoje.dia + 1
+    print("{}/{}/{}".format(hoje.dia,hoje.mes,hoje.ano))
