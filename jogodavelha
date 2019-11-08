@@ -1,0 +1,164 @@
+from time import  sleep
+
+class jogo:
+    def __init__(self,matriz = 0,j = 0,vencedor = True,ganhou = True,esc1 = 0,esc2 = 0,vezes= 0,usando = None, jgd1 = 0,jgd2 = 0,p1= None,p2= None,p3= None,p4= None,p5= None,p6= None,p7= None,p8= None,p9= None, pos1 = None,pos2= None,pos3= None,pos4= None,pos5= None,pos6= None,pos7= None,pos8= None,pos9= None, lv= None):
+        self.matriz = [[1,2,3],[4,5,6 ],[7,8,9]]
+        self.lv = 'livre'
+        self.pos1 = lv
+        self.pos2 = lv
+        self.pos3 = lv
+        self.pos4 = lv
+        self.pos5 = lv
+        self.pos6 = lv
+        self.pos7 = lv
+        self.pos8 = lv
+        self.pos9 = lv
+        self.j = 0
+        self.jgd1 = 0
+        self.jgd2 = 0
+        self.p1 = ' '
+        self.p2 = ' '
+        self.p3 = ' '
+        self.p4 = ' '
+        self.p5 = ' '
+        self.p6 = ' '
+        self.p7 = ' '
+        self.p8 = ' '
+        self.p9 = ' '
+        self.vencedor = True
+        self.ganhou = True
+        self.esc1 = 0
+        self.esc2 = 0
+        self.vezes = 0
+        self.usando = ' '
+
+
+jogo = jogo()
+jogo.jgd1 = 'X'
+jogo.jgd2 = 'O'
+
+print(' O jogador 1 é o X e o jogador 2 é o O')
+sleep(4)
+
+while jogo.vencedor == True:
+    tabuleiro = '''
+         |     |   
+      {}  |  {}  |  {}
+    _____|_____|_____
+         |     |
+      {}  |  {}  |  {}
+    _____|_____|_____
+         |     |
+      {}  |  {}  |  {}
+         |     |
+            '''.format(jogo.p1, jogo.p2, jogo.p3, jogo.p4, jogo.p5, jogo.p6, jogo.p7, jogo.p8, jogo.p9)
+    print(tabuleiro)
+
+    print("Jogador 1")
+    jogo.esc1 = int(input("que numeor voc quer?"))
+    print("jogador 2")
+    jogo.esc2 = int(input("que numero você quer?"))
+
+
+    if jogo.esc1 == 1:
+        if jogo.p1 == 'X' or jogo.p1 == 'O':
+            print("esse ja tem animal")
+        else:
+            jogo.p1 = jogo.jgd1
+    if jogo.esc2 == 1:
+        if jogo.p1 == 'X' or jogo.p1 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p1 = jogo.jgd2
+    if jogo.esc1 == 2:
+        if jogo.p2 == 'X' or jogo.p2 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p2 = jogo.jgd1
+    if jogo.esc2 == 2:
+        if jogo.p1 == 'X' or jogo.p2 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p2 = jogo.jgd2
+    if jogo.esc1 == 3:
+        if jogo.p3 == 'X' or jogo.p3 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p3 = jogo.jgd1
+    if jogo.esc2 == 3:
+        if jogo.p3 == 'X' or jogo.p3 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p3 = jogo.jgd2
+    if jogo.esc1 == 4:
+        if jogo.p4 == 'X' or jogo.p4 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p4 = jogo.jgd1
+    if jogo.esc2 == 4:
+        if jogo.p4 == 'X' or jogo.p4 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p4 = jogo.jgd2
+    if jogo.esc1 == 5:
+        if jogo.p5 == 'X' or jogo.p5 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p5 = jogo.jgd1
+    if jogo.esc2 == 5:
+        if jogo.p5 == 'X' or jogo.p5 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p5 = jogo.jgd2
+    if jogo.esc1 == 6:
+        if jogo.p6 == 'X' or jogo.p6 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p6 = jogo.jgd1
+    if jogo.esc2 == 6:
+        if jogo.p6 == 'X' or jogo.p6 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p6 = jogo.jgd2
+
+    if jogo.esc1 == 7:
+        if jogo.p7 == 'X' or jogo.p7 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p7 = jogo.jgd1
+
+    if jogo.esc2 == 7:
+        if jogo.p7 == 'X' or jogo.p7 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p7 = jogo.jgd2
+
+    if jogo.esc1 == 8:
+        if jogo.p8 == 'X' or jogo.p8 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p8 = jogo.jgd1
+
+    if jogo.esc2 == 8:
+        if jogo.p8 == 'X' or jogo.p8 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p8 = jogo.jgd2
+
+    if jogo.esc1 == 9:
+        if jogo.p9 == 'X' or jogo.p9 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p9 = jogo.jgd1
+
+    if jogo.esc2 == 9:
+        if jogo.p9 == 'X' or jogo.p9 == 'O':
+            print("esse ja tem")
+        else:
+            jogo.p9 = jogo.jgd2
+
+
+
+    jogo.vezes = jogo.vezes + 1
+    if jogo.ganhou == False or jogo.vezes == 9:
+        jogo.vencedor = False
